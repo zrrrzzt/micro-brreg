@@ -6,18 +6,13 @@ const brreg = require('brreg')
 
 module.exports = (request, response) => {
   const { query } = parse(request.url, true)
+  const q = query.query || ''
 
-  if (!query.query) {
-    const error = new Error('Missing required input: query')
-    error.statusCode = 400
-    throw error
-  } else {
-    brreg({query: query.query}, (error, data) => {
-      if (error) {
-        send(response, 500, error)
-      } else {
-        send(response, 200, data.entries)
-      }
-    })
-  }
+  brreg({query: q}, (error, data) => {
+    if (error) {
+      send(response, 500, error.message)
+    } else {
+      send(response, 200, data.entries)
+    }
+  })
 }
