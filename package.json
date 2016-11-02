@@ -1,0 +1,46 @@
+{
+  "name": "micro-brreg",
+  "description": "microservice for brreg",
+  "version": "1.0.0",
+  "license": "MIT",
+  "author": {
+    "name": "Geir Gåsodden",
+    "email": "geir.gasodden@pythonia.no",
+    "url": "https://github.com/zrrrzzt"
+  },
+  "main": "index.js",
+  "engines": {
+    "node": ">=6.9.1"
+  },
+  "scripts": {
+    "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
+    "coverage": "tap test/**/*.js --coverage",
+    "coveralls": "tap --cov --coverage-report=lcov test/**/*.js && cat coverage/lcov.info | coveralls",
+    "setup": "npm install && node setup.js",
+    "standard-fix": "standard --fix",
+    "start": "micro -p 3000"
+  },
+  "keywords": [
+    "tilskudd",
+    "søknadsskjema",
+    "microsite",
+    "Telemark fylkeskommune"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/zrrrzzt/tilskudd.t-fk.no.git"
+  },
+  "bugs": {
+    "url": "http://github.com/zrrrzzt/tilskudd.t-fk.no/issues"
+  },
+  "devDependencies": {
+    "coveralls": "2.11.14",
+    "nsp": "2.6.2",
+    "standard": "8.4.0",
+    "tap": "8.0.0"
+  },
+  "dependencies": {
+    "brreg": "2.0.2",
+    "micro": "6.1.0"
+  }
+}
