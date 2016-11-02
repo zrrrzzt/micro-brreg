@@ -4,15 +4,17 @@ const { parse } = require('url')
 const { send } = require('micro')
 const brreg = require('brreg')
 
-module.exports = (request, response) => {
+module.exports = async (request, response) => {
   const { query } = parse(request.url, true)
   const q = query.query || ''
 
-  brreg({query: q}, (error, data) => {
+  return await brreg({query: q}, (error, data) => {
     if (error) {
       send(response, 500, error.message)
     } else {
-      send(response, 200, data.entries)
+      response.writeHead(200, {'Content-Type': 'application/json; charset=utf-8'})
+      response.write(JSON.stringify(data.entries))
+      response.end()
     }
   })
 }
