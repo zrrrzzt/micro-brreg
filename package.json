@@ -1,7 +1,7 @@
 {
   "name": "micro-brreg",
   "description": "microservice for brreg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
@@ -11,6 +11,11 @@
   "main": "index.js",
   "engines": {
     "node": ">=6.9.1"
+  },
+  "now": {
+    "engines": {
+      "node": "6.9.1"
+    }
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
