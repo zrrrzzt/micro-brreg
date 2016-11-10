@@ -1,7 +1,7 @@
 {
   "name": "micro-brreg",
   "description": "microservice for brreg",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
