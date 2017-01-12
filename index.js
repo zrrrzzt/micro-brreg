@@ -8,7 +8,7 @@ const getEnhet = require('./lib/get-enhet')
 const getUnderenhet = require('./lib/get-underenhet')
 
 module.exports = async (request, response) => {
-  const {pathname, query} = await parse(request.url, true)
+  const {query} = await parse(request.url, true)
   const data = request.method === 'POST' ? await json(request) : query
 
   if (data.organisasjonsnummer && data.organisasjonsnummer.length > 0) {
