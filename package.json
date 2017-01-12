@@ -1,7 +1,7 @@
 {
   "name": "micro-brreg",
   "description": "microservice for brreg",
-  "version": "3.0.1",
+  "version": "3.0.2",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
@@ -11,9 +11,6 @@
   "main": "index.js",
   "engines": {
     "node": ">=7.4.0"
-  },
-  "now": {
-    "alias": "brreg.pythonia.no"
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
@@ -37,6 +34,9 @@
   },
   "bugs": {
     "url": "http://github.com/zrrrzzt/micro-brreg/issues"
+  },
+  "now": {
+    "alias": "brreg.micro.somuch.party"
   },
   "devDependencies": {
     "coveralls": "2.11.15",
