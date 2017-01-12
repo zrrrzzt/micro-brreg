@@ -1,7 +1,7 @@
 {
   "name": "micro-brreg",
   "description": "microservice for brreg",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "license": "MIT",
   "author": {
     "name": "Geir Gåsodden",
@@ -10,20 +10,20 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=6.9.1"
+    "node": ">=7.4.0"
   },
   "now": {
-    "engines": {
-      "node": "6.9.1"
-    }
+    "alias": "brreg.pythonia.no"
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
     "coverage": "tap test/**/*.js --coverage",
     "coveralls": "tap --cov --coverage-report=lcov test/**/*.js && cat coverage/lcov.info | coveralls",
-    "setup": "npm install && node setup.js",
+    "setup": "npm install",
     "standard-fix": "standard --fix",
-    "start": "micro -p 3000"
+    "now-deploy": "npm test && now --npm && now alias",
+    "start": "NODE_ENV=production micro -p 8080",
+    "dev": "micro -p 3000"
   },
   "keywords": [
     "microservice",
@@ -45,7 +45,8 @@
     "tap": "9.0.2"
   },
   "dependencies": {
-    "brreg": "2.1.0",
+    "got": "6.7.1",
+    "marked": "0.3.6",
     "micro": "6.1.0"
   }
 }
