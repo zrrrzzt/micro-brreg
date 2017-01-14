@@ -5,18 +5,19 @@ const { parse } = require('url')
 const marked = require('marked')
 const { json, send } = require('micro')
 const getEnhet = require('./lib/get-enhet')
-const getUnderenhet = require('./lib/get-underenhet')
 
 module.exports = async (request, response) => {
   const {query} = await parse(request.url, true)
   const data = request.method === 'POST' ? await json(request) : query
 
   if (data.organisasjonsnummer && data.organisasjonsnummer.length > 0) {
-    const enhet = await getEnhet(data.organisasjonsnummer)
-    const underenhet = await getUnderenhet(data.organisasjonsnummer)
+    const enhet = await getEnhet(data.organisasjonsnummer, 'enhet')
+    const underenhet = await getEnhet(data.organisasjonsnummer, 'underenhet')
 
     const result = enhet || underenhet
-    send(response, 200, result || {})
+    const code = result ? 200 : 404
+
+    send(response, code, result || {})
   } else {
     const readme = readFileSync('./README.md', 'utf-8')
     const html = marked(readme)

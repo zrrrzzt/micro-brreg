@@ -1,8 +1,9 @@
 {
   "name": "micro-brreg",
   "description": "microservice for brreg",
-  "version": "3.0.4",
+  "version": "3.0.5",
   "license": "MIT",
+  "private": true,
   "author": {
     "name": "Geir Gåsodden",
     "email": "geir.gasodden@pythonia.no",
@@ -36,7 +37,7 @@
     "url": "http://github.com/zrrrzzt/micro-brreg/issues"
   },
   "now": {
-    "alias": "brreg.micro.somuch.party"
+    "alias": "organisasjonsnummer.mikrotjeneste.win"
   },
   "devDependencies": {
     "coveralls": "2.11.15",
