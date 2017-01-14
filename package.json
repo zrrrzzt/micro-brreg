@@ -1,7 +1,7 @@
 {
   "name": "micro-brreg",
   "description": "microservice for brreg",
-  "version": "3.0.5",
+  "version": "3.0.6",
   "license": "MIT",
   "private": true,
   "author": {

@@ -17,7 +17,7 @@ module.exports = async (request, response) => {
     const result = enhet || underenhet
     const code = result ? 200 : 404
 
-    send(response, code, result || {})
+    send(response, code, result || {error: 'Not found'})
   } else {
     const readme = readFileSync('./README.md', 'utf-8')
     const html = marked(readme)
