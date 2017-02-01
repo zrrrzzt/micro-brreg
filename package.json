@@ -1,7 +1,7 @@
 {
   "name": "micro-brreg",
   "description": "microservice for brreg",
-  "version": "3.0.6",
+  "version": "3.0.7",
   "license": "MIT",
   "private": true,
   "author": {
@@ -11,7 +11,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=7.4.0"
+    "node": ">=7.5.0"
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
@@ -31,19 +31,24 @@
   ],
   "repository": {
     "type": "git",
-    "url": "http://github.com/zrrrzzt/micro-brreg.git"
+    "url": "https://github.com/zrrrzzt/micro-brreg.git"
   },
   "bugs": {
-    "url": "http://github.com/zrrrzzt/micro-brreg/issues"
+    "url": "https://github.com/zrrrzzt/micro-brreg/issues"
   },
   "now": {
-    "alias": "organisasjonsnummer.mikrotjeneste.win"
+    "aliases": [
+      "organisasjonsnummer.mikrotjeneste.win"
+    ],
+    "env": {
+      "NODE_ENV": "production"
+    }
   },
   "devDependencies": {
     "coveralls": "2.11.15",
     "nsp": "2.6.2",
     "standard": "8.6.0",
-    "tap": "9.0.3"
+    "tap": "10.0.0"
   },
   "dependencies": {
     "got": "6.7.1",
