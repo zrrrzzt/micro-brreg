@@ -11,7 +11,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=7.5.0"
+    "node": ">=7.7.1"
   },
   "scripts": {
     "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
@@ -19,9 +19,8 @@
     "coveralls": "tap --cov --coverage-report=lcov test/**/*.js && cat coverage/lcov.info | coveralls",
     "setup": "npm install",
     "standard-fix": "standard --fix",
-    "now-deploy": "npm test && now --npm --alias",
-    "start": "micro -p 8080",
-    "dev": "micro"
+    "now-deploy": "npm test && now --npm && now alias",
+    "start": "micro"
   },
   "keywords": [
     "microservice",
@@ -37,12 +36,13 @@
     "url": "https://github.com/zrrrzzt/micro-brreg/issues"
   },
   "now": {
-    "aliases": [
+    "alias": [
       "organisasjonsnummer.mikrotjeneste.win"
     ],
     "env": {
       "NODE_ENV": "production"
-    }
+    },
+    "type": "npm"
   },
   "devDependencies": {
     "coveralls": "2.11.16",
@@ -51,7 +51,7 @@
     "tap": "10.3.0"
   },
   "dependencies": {
-    "got": "6.7.1",
+    "axios": "0.15.3",
     "marked": "0.3.6",
     "micro": "7.0.6"
   }
