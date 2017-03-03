@@ -1,7 +1,7 @@
 {
   "name": "micro-brreg",
   "description": "microservice for brreg",
-  "version": "3.0.8",
+  "version": "3.1.0",
   "license": "MIT",
   "private": true,
   "author": {
@@ -14,9 +14,10 @@
     "node": ">=7.7.1"
   },
   "scripts": {
-    "test": "standard && nsp check && tap --reporter=spec test/**/*.js",
-    "coverage": "tap test/**/*.js --coverage",
-    "coveralls": "tap --cov --coverage-report=lcov test/**/*.js && cat coverage/lcov.info | coveralls",
+    "test": "standard && nsp check && ava",
+    "test-offline": "standard && ava",
+    "coverage": "nyc ava",
+    "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
     "setup": "npm install",
     "standard-fix": "standard --fix",
     "now-deploy": "npm test && now --npm && now alias",
@@ -45,10 +46,12 @@
     "type": "npm"
   },
   "devDependencies": {
+    "ava": "0.18.2",
     "coveralls": "2.11.16",
     "nsp": "2.6.2",
-    "standard": "8.6.0",
-    "tap": "10.3.0"
+    "nyc": "10.1.2",
+    "standard": "9.0.0",
+    "test-listen": "1.0.1"
   },
   "dependencies": {
     "axios": "0.15.3",

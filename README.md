@@ -15,13 +15,13 @@ This is just a wrapper for the official [API](https://confluence.brreg.no/displa
 ### GET
 
 ```
-$ curl -v http://localhost:3000?organisasjonsnummer=974760673
+$ curl -v https://organisasjonsnummer.mikrotjeneste.win?organisasjonsnummer=974760673
 ```
 
 ### POST
 
 ```sh
-$ curl -d '{"organisasjonsnummer": "974760673"}' -v http://localhost:3000
+$ curl -d '{"organisasjonsnummer": "974760673"}' -v https://organisasjonsnummer.mikrotjeneste.win
 ```
 
 ### Returns
