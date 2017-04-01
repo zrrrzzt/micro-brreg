@@ -55,7 +55,7 @@
     "test-listen": "1.0.1"
   },
   "dependencies": {
-    "axios": "0.15.3",
+    "axios": "0.16.0",
     "marked": "0.3.6",
     "micro": "7.1.0"
   }
