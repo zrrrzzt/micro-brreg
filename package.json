@@ -11,7 +11,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=7.7.1"
+    "node": ">=7.8.0"
   },
   "scripts": {
     "test": "standard && nsp check && ava",
@@ -36,9 +36,10 @@
   "bugs": {
     "url": "https://github.com/zrrrzzt/micro-brreg/issues"
   },
+  "homepage": "https://github.com/zrrrzzt/micro-brreg",
   "now": {
     "alias": [
-      "organisasjonsnummer.mikrotjeneste.win"
+      "organisasjonsnummer.mikrotjeneste.no"
     ],
     "env": {
       "NODE_ENV": "production"
