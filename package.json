@@ -1,7 +1,7 @@
 {
   "name": "micro-brreg",
   "description": "microservice for brreg",
-  "version": "3.1.1",
+  "version": "3.2.0",
   "license": "MIT",
   "private": true,
   "author": {
@@ -11,7 +11,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=7.8.0"
+    "node": ">=8.6.0"
   },
   "scripts": {
     "test": "standard && nsp check && ava",
@@ -21,6 +21,7 @@
     "setup": "npm install",
     "standard-fix": "standard --fix",
     "now-deploy": "npm test && now --npm && now alias",
+    "dev": "micro-dev",
     "start": "micro"
   },
   "keywords": [
@@ -49,6 +50,7 @@
   "devDependencies": {
     "ava": "0.22.0",
     "coveralls": "3.0.0",
+    "micro-dev": "1.2.3",
     "nsp": "2.8.1",
     "nyc": "11.2.1",
     "standard": "10.0.3",
@@ -56,7 +58,7 @@
   },
   "dependencies": {
     "axios": "0.16.2",
-    "marked": "0.3.6",
+    "markdown-it": "8.4.0",
     "micro": "9.0.0"
   }
 }
