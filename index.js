@@ -10,6 +10,7 @@ module.exports = async (request, response) => {
   const {query} = await parse(request.url, true)
   const data = request.method === 'POST' ? await json(request) : query
   if (data.organisasjonsnummer && data.organisasjonsnummer.length > 0) {
+    response.setHeader('Access-Control-Allow-Origin', '*')
     try {
       const [enhet, underenhet] = await Promise.all([getEnhet(data.organisasjonsnummer, 'enhet'), getEnhet(data.organisasjonsnummer, 'underenhet')])
       const result = enhet || underenhet
