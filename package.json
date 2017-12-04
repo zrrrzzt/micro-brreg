@@ -50,7 +50,7 @@
   "devDependencies": {
     "ava": "0.23.0",
     "coveralls": "3.0.0",
-    "micro-dev": "1.4.0",
+    "micro-dev": "2.0.0",
     "nsp": "2.8.1",
     "nyc": "11.2.1",
     "standard": "10.0.3",
