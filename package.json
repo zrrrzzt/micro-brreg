@@ -54,7 +54,7 @@
     "nsp": "2.8.1",
     "nyc": "11.2.1",
     "standard": "10.0.3",
-    "test-listen": "1.0.2"
+    "test-listen": "1.1.0"
   },
   "dependencies": {
     "axios": "0.17.0",
