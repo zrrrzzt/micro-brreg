@@ -11,7 +11,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=8.6.0"
+    "node": ">=8.9.4"
   },
   "scripts": {
     "test": "standard && nsp check && ava",
@@ -20,9 +20,10 @@
     "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
     "setup": "npm install",
     "standard-fix": "standard --fix",
-    "now-deploy": "npm test && now --npm && now alias",
+    "now-deploy": "npm test && now && now alias",
     "dev": "micro-dev",
-    "start": "micro"
+    "start": "micro",
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
   },
   "keywords": [
     "microservice",
@@ -32,12 +33,12 @@
   ],
   "repository": {
     "type": "git",
-    "url": "https://github.com/zrrrzzt/micro-brreg.git"
+    "url": "git+https://github.com/zrrrzzt/micro-brreg.git"
   },
   "bugs": {
     "url": "https://github.com/zrrrzzt/micro-brreg/issues"
   },
-  "homepage": "https://github.com/zrrrzzt/micro-brreg",
+  "homepage": "https://github.com/zrrrzzt/micro-brreg#readme",
   "now": {
     "alias": [
       "organisasjonsnummer.mikrotjeneste.no"
@@ -45,7 +46,10 @@
     "env": {
       "NODE_ENV": "production"
     },
-    "type": "npm"
+    "type": "npm",
+    "engines": {
+      "node": "8.9.4"
+    }
   },
   "devDependencies": {
     "ava": "0.24.0",
