@@ -62,7 +62,7 @@
   },
   "dependencies": {
     "axios": "0.17.1",
-    "markdown-it": "8.4.0",
+    "markdown-it": "8.4.1",
     "micro": "9.1.0"
   }
 }
