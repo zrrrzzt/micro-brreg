@@ -25,7 +25,7 @@ test('it returns json for sub entity from GET', async t => {
 
 test('it returns json for sub entity from POST', async t => {
   const url = await getUrl(srv)
-  const result = await axios.post(`${url}`, {organisasjonsnummer: '974760673'})
+  const result = await axios.post(`${url}`, { organisasjonsnummer: '974760673' })
   t.deepEqual(result.data.organisasjonsnummer, 974760673, 'json ok')
 })
 
@@ -37,6 +37,6 @@ test('it returns json for main entity from GET', async t => {
 
 test('it returns json for main entity from POST', async t => {
   const url = await getUrl(srv)
-  const result = await axios.post(`${url}`, {organisasjonsnummer: '912660680'})
+  const result = await axios.post(`${url}`, { organisasjonsnummer: '912660680' })
   t.deepEqual(result.data.organisasjonsnummer, 912660680, 'json ok')
 })

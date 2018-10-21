@@ -7,7 +7,7 @@ const { json, send } = require('micro')
 const getEnhet = require('./lib/get-enhet')
 
 module.exports = async (request, response) => {
-  const {query} = await parse(request.url, true)
+  const { query } = await parse(request.url, true)
   const data = request.method === 'POST' ? await json(request) : query
   if (data.organisasjonsnummer && data.organisasjonsnummer.length > 0) {
     response.setHeader('Access-Control-Allow-Origin', '*')
@@ -16,7 +16,7 @@ module.exports = async (request, response) => {
       const result = enhet || underenhet
       const code = result ? 200 : 404
 
-      send(response, code, result || {error: 'Not found'})
+      send(response, code, result || { error: 'Not found' })
     } catch (error) {
       send(response, 500, error)
     }
