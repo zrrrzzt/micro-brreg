@@ -1,6 +1,4 @@
-'use strict'
-
-const readFileSync = require('fs').readFileSync
+const { readFile } = require('fs').promises
 const { parse } = require('url')
 const md = require('markdown-it')()
 const { json, send } = require('micro')
@@ -21,7 +19,7 @@ module.exports = async (request, response) => {
       send(response, 500, error)
     }
   } else {
-    const readme = readFileSync('./README.md', 'utf-8')
+    const readme = await readFile('./README.md', 'utf-8')
     send(response, 200, md.render(readme))
   }
 }
