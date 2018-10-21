@@ -1,0 +1,11 @@
+{
+    "name": "micro-brreg",
+    "alias": [
+      "brreg.mikrotjeneste.no",
+      "organisasjonsnummer.mikrotjeneste.no"
+    ],
+    "type": "docker",
+    "features": {
+      "cloud": "v2"
+    }
+  }
