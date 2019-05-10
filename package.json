@@ -43,7 +43,7 @@
     "coveralls": "3.0.3",
     "husky": "2.1.0",
     "micro-dev": "3.0.0",
-    "nyc": "14.0.0",
+    "nyc": "14.1.1",
     "standard": "12.0.1",
     "test-listen": "1.1.0"
   },
