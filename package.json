@@ -40,7 +40,7 @@
   "homepage": "https://github.com/zrrrzzt/micro-brreg#readme",
   "devDependencies": {
     "ava": "3.5.0",
-    "coveralls": "3.0.9",
+    "coveralls": "3.0.11",
     "husky": "4.2.3",
     "micro-dev": "3.0.0",
     "nyc": "15.0.0",
