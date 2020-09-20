@@ -19,9 +19,10 @@
     "coverage": "nyc ava",
     "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
     "standard-fix": "standard --fix",
-    "deploy": "npm test && vc --prod",
+    "deploy": "npm test && npm run build-frontpage && vc --prod",
     "dev": "vc dev",
-    "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
+    "refresh": "rm -rf node_modules && rm package-lock.json && npm install",
+    "build-frontpage": "npx @kubosho/md-to-html README.md --out index.html"
   },
   "keywords": [
     "microservice",
