@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/zrrrzzt/micro-brreg.svg?branch=master)](https://travis-ci.org/zrrrzzt/micro-brreg)
+[![Build Status](https://travis-ci.org/zrrrzzt/micro-brreg.svg?branch=main)](https://travis-ci.org/zrrrzzt/micro-brreg)
 [![js-standard-style](https://img.shields.io/badge/code%20style-standard-brightgreen.svg?style=flat)](https://github.com/feross/standard)
 
 # micro-brreg
@@ -7,20 +7,20 @@ Microservice for checking organization number by the Norwegian Enity Registry.
 
 The service checks main- and subunits and returns the result.
 
-This is just a wrapper for the official [API](https://confluence.brreg.no/display/DBNPUB/API).
+This is just a wrapper for the official [API](https://data.brreg.no/enhetsregisteret/api/docs/index.html).
 
 ## API
 
 ### GET
 
 ```
-$ curl -v https://organisasjonsnummer.mikrotjeneste.win?organisasjonsnummer=974760673
+$ curl -v https://organisasjonsnummer.mikrotjeneste.no/api?organisasjonsnummer=974760673
 ```
 
 ### POST
 
 ```sh
-$ curl -d '{"organisasjonsnummer": "974760673"}' -v https://organisasjonsnummer.mikrotjeneste.win
+$ curl -d '{"organisasjonsnummer": "974760673"}' -v https://organisasjonsnummer.mikrotjeneste.no/api
 ```
 
 ### Returns
