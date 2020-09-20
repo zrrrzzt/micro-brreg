@@ -11,7 +11,7 @@
   },
   "main": "index.js",
   "engines": {
-    "node": ">=10.16.0"
+    "node": ">=12.18.4"
   },
   "scripts": {
     "test": "standard && npm audit && ava",
