@@ -19,9 +19,8 @@
     "coverage": "nyc ava",
     "coveralls": "nyc ava && nyc report --reporter=lcov && cat coverage/lcov.info | coveralls",
     "standard-fix": "standard --fix",
-    "deploy": "npm test && now && now alias",
-    "dev": "micro-dev",
-    "start": "micro",
+    "deploy": "npm test && vc --prod",
+    "dev": "vc dev",
     "refresh": "rm -rf node_modules && rm package-lock.json && npm install"
   },
   "keywords": [
@@ -39,18 +38,14 @@
   },
   "homepage": "https://github.com/zrrrzzt/micro-brreg#readme",
   "devDependencies": {
-    "ava": "2.2.0",
-    "coveralls": "3.0.4",
-    "husky": "3.0.0",
-    "micro-dev": "3.0.0",
-    "nyc": "14.1.1",
-    "standard": "12.0.1",
-    "test-listen": "1.1.0"
+    "ava": "3.12.1",
+    "coveralls": "3.1.0",
+    "husky": "4.3.0",
+    "nyc": "15.1.0",
+    "standard": "14.3.4"
   },
   "dependencies": {
-    "axios": "0.19.0",
-    "markdown-it": "8.4.2",
-    "micro": "9.3.4"
+    "axios": "0.20.0"
   },
   "husky": {
     "hooks": {
