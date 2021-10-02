@@ -46,7 +46,7 @@
     "standard": "16.0.3"
   },
   "dependencies": {
-    "axios": "0.21.4"
+    "axios": "0.22.0"
   },
   "husky": {
     "hooks": {
